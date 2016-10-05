@@ -26,6 +26,8 @@
         android:layout_width="match_parent"
         android:id="@+id/topic_title"
         android:textSize="20sp"
+        android:ellipsize="end"
+        android:maxLines="2"
         android:layout_height="wrap_content"
         android:textColor="#000000"
         android:text="刚拿到驾照的人上高速有潜在危险吗？"/>
@@ -33,12 +35,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="40sp"
             android:id="@+id/size_of_info"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:text="11k"/>
         <TextView
             android:layout_width="fill_parent"
+            android:ellipsize="end"
             android:layout_height="wrap_content"
             android:id="@+id/preview_of_content"
             android:maxLines="3"/>
