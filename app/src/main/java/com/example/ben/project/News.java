@@ -49,8 +49,8 @@ public class News {
     public String getTitleOfText(){
         return title;
     }
-    public int getSize_of_text(){
-        return size_of_text;
+    public String getSize_of_text(){
+        return ""+size_of_text+"k";
     }
     public int getContent_id(){
         return content_id;
