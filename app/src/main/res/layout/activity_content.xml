@@ -10,18 +10,16 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="#FF3F51B5"
         android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:popupTheme="@style/AppTheme.PopupOverlay"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:textSize="16dp"
         android:text="左侧滑菜单相关布局，菜单相关选项的功能不用实现点击跳转"
-        android:maxLines="1"
-        android:ellipsize="end"
         android:id="@+id/title2"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,6 +40,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:id="@+id/provider"
+                android:textColor="#000000"
                 android:text="嚼花"
                 android:layout_height="wrap_content" />
             <TextView
@@ -69,12 +68,15 @@
         android:background="#cac9c9"/>
     <ScrollView
         android:layout_width="match_parent"
+        android:padding="10dp"
         android:layout_weight="1"
         android:layout_height="0dp">
         <TextView
             android:layout_width="match_parent"
             android:id="@+id/content2"
-            android:layout_height="match_parent" />
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:layout_height="wrap_content" />
     </ScrollView>
     <LinearLayout
         android:layout_width="match_parent"
