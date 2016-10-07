@@ -58,7 +58,12 @@ public class MainActivity extends AppCompatActivity
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                News infor=(News)parent.getItemAtPosition(position);
+                Intent i=new Intent(MainActivity.this,ContentActivity.class);
+                Bundle bundle=new Bundle();
+                bundle.putSerializable("Data",infor);
+                i.putExtras(bundle);
+                startActivity(i);
             }
         });
     }

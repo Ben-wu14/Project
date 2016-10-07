@@ -7,12 +7,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 
 /**
  * Created by 84568 on 2016/10/7.
  */
-public class News {
+public class News implements Serializable{
     private String name_of_provider;
     private String profile_of_provider;
     private int number_of_likes;
