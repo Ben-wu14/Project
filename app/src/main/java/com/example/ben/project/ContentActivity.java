@@ -16,8 +16,6 @@ public class ContentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         Intent intent=getIntent();
         newsdata=(News)intent.getSerializableExtra("Data");
@@ -33,9 +31,9 @@ public class ContentActivity extends AppCompatActivity {
 
         TextView userProfile=(TextView)findViewById(R.id.provider_info);
         userProfile.setText(newsdata.getProfile_of_provider());
-        
+
         TextView numberOfLikes=(TextView)findViewById(R.id.numberOfGood);
-        numberOfLikes.setText(newsdata.getNumber_of_likes());
+        numberOfLikes.setText(""+newsdata.getNumber_of_likes());
 
         TextView content=(TextView)findViewById(R.id.content2);
         content.setText(newsdata.getContentString(getBaseContext()));
