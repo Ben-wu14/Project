@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,6 +20,10 @@ public class ContentActivity extends AppCompatActivity {
 
         Intent intent=getIntent();
         newsdata=(News)intent.getSerializableExtra("Data");
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        myToolbar.setTitle(newsdata.getTitleOfText());
+        setSupportActionBar(myToolbar);
 
         TextView title=(TextView)findViewById(R.id.title2);
         title.setText(newsdata.getTitleOfText());
@@ -41,5 +46,10 @@ public class ContentActivity extends AppCompatActivity {
         TextView comment=(TextView)findViewById(R.id.comment);
         comment.setText("评论 "+newsdata.getNumber_of_comment());
     }
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.content_menu, menu);
+        return true;
+    }
 }
