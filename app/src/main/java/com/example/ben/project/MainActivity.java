@@ -14,6 +14,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -41,6 +43,13 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        ArrayList<News> list=new ArrayList<>();
+        list.add(new News("吞茶嚼花，故事真的不缺。","p1",18,200,R.drawable.p1,"用无名小卒的视角看主角和反派 Boss 是一种怎样的体验？",12,R.raw.text1));
+        list.add(new News("秋原","小字辈电影编导，末流摄影师，不入流历史读物作家",30,101,R.drawable.p2,"执行导演和演员副导演在剧组的工作职责和内容是什么？",15,R.raw.text2));
+        list.add(new News("王瑞","微信公号：安慰记yes ／准心理咨询师／准骨灰级影迷",60,139,R.drawable.p3,"使用不同的语言，会对人们的思维方式产生怎样的影响？",4,R.raw.text3));
+        list.add(new News("方可","临床医学学生。知乎不能看病。。。",80,20,R.drawable.p4,"为什么我们越睡越晚？",9,R.raw.text4));
+        list.add(new News("刘煜晨","farmer in tennessee",40,70,R.drawable.p5,"互联网广告市场存在泡沫吗？经济下行是否会导致互联网广告行业不景气？",4,R.raw.text5));
     }
 
     @Override
