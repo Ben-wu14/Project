@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -50,6 +51,9 @@ public class MainActivity extends AppCompatActivity
         list.add(new News("王瑞","微信公号：安慰记yes ／准心理咨询师／准骨灰级影迷",60,139,R.drawable.p3,"使用不同的语言，会对人们的思维方式产生怎样的影响？",4,R.raw.text3));
         list.add(new News("方可","临床医学学生。知乎不能看病。。。",80,20,R.drawable.p4,"为什么我们越睡越晚？",9,R.raw.text4));
         list.add(new News("刘煜晨","farmer in tennessee",40,70,R.drawable.p5,"互联网广告市场存在泡沫吗？经济下行是否会导致互联网广告行业不景气？",4,R.raw.text5));
+        NewsAdapter adapter=new NewsAdapter(this,list);
+        ListView listView=(ListView)findViewById(R.id.list);
+        listView.setAdapter(adapter);
     }
 
     @Override
