@@ -61,7 +61,7 @@ public class News implements Serializable{
         InputStream in = null;
         InputStreamReader inputStreamReader = null;
         try {
-            in = res.openRawResource(content_id);
+            in = res.openRawResource(getContent_id());
             inputStreamReader = new InputStreamReader(in, "gbk");
         } catch (UnsupportedEncodingException e1) {
             e1.printStackTrace();
